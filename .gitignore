@@ -1,0 +1,10 @@
+cache/
+
+# Nano backup files
+*~
+
+# Python run-time files
+*.pyc
+
+# Speech output
+*.wav
