@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 
 
 def fetch_source(url, timestamp = ""):
-	''' Task 4.1
+	'''
 	Return a string containing the HTML source file of the webpage 'url'.
 	Optional: Pass a timestamp and this overwrites the current time in Lazy.
 
@@ -69,7 +69,7 @@ def get_weather_url(location):
 
 
 def retrieve_weather_report(location):
-	''' Task 4.3
+	'''
 	Return weather report(s) on passed location. Information is fetched from
 	yr.no. Return value is a dictionary with location names for key and a table
 	of various weather information for values. Uses nine regexes per URL.
@@ -133,7 +133,7 @@ def print_weather_info(values):
 
 
 def weather_update(place, hour, minute):
-	''' Task 4.5
+	'''
 	Return a forecast of the given place(s) for the current time interval if
 	input time is in the future, or for tomorrow's corresponding time interval
 	if input time is in the past.

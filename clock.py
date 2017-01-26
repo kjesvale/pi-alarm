@@ -8,7 +8,7 @@ alarms = []
 def read_config():
 	global alarms
 	alarms = []
-	file = open('config.txt', 'r')
+	file = open('alarm.config', 'r')
 	for line in file:
 		items = line.split(':')
 		alarms.append({'hour': int(items[0]), 'min': int(items[1])})
@@ -29,7 +29,7 @@ def run():
 	now = time.localtime()
 	for alarm in alarms:
 		if now.tm_hour == alarm['hour'] and now.tm_min == alarm['min']:
-			subprocess.call('./wake.sh')
+			subprocess.call('./fire_alarm.sh')
 	
 	time.sleep(60)
 	read_config()
