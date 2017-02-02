@@ -12,3 +12,7 @@ cache/
 
 # Configuration files
 *.config
+
+# Hue configuration
+hue.config
+
