@@ -8,3 +8,6 @@ cache/
 
 # Speech output
 *.wav
+
+# Hue configuration
+hue.config
