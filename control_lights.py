@@ -5,11 +5,11 @@ import time
 user_config = open('hue.config', 'r')
 hue_ip = user_config.readline().strip()
 user_id = user_config.readline().strip()
+wakeup_duration = user_config.readline().strip()
 
 base_url = 'http://' + hue_ip + '/api/' + user_id + '/'
 group = base_url + 'groups/1/action'
 
-wakeup_duration = 30
 light_max_value = 254
 sleep_duration = (wakeup_duration * 60) / 254
 
