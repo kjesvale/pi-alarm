@@ -2,9 +2,11 @@
 echo "Pierra said:" $1
 echo $1 > input
 read buffer < input
-sudo pico2wave -w=speech.wav "${buffer}" >& trash
-sudo aplay speech.wav >& trash
+
+# Compile and say input message.
+pico2wave -w=speech.wav "${buffer}"
+#aplay speech.wav &> /dev/null
+sox -v 0.9 speech.wav -r 48k speech.mp3 gain -6 treble +6 &> /dev/null
+mplayer speech.mp3 &> /dev/null
+
 rm input
-#sudo rm speech.wav
-sudo timeout 60s mplayer http://lyd.nrk.no/nrk_radio_p3_mp3_h >& trash
-rm trash
