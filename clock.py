@@ -29,7 +29,7 @@ def run():
 	now = time.localtime()
 	for alarm in alarms:
 		if now.tm_hour == alarm['hour'] and now.tm_min == alarm['min']:
-			subprocess.call('./fire_alarm.sh')
+			subprocess.call('./wakeup_sequence.sh', shell = True)
 	
 	time.sleep(60)
 	read_config()
