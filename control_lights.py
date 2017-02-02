@@ -14,13 +14,15 @@ light_max_value = 254
 sleep_duration = (wakeup_duration * 60) / 254
 
 # Initial light settings to ensure they're on and has the correct color temp.
-requests.put(group, data = json.dumps({ 'on': True, 'bri': bri, 'ct': 286 }))
+requests.put(group, data = json.dumps({ 'on': True, 'bri': 0, 'ct': 286 }))
 
 print 'Wakeup sequence initialized.'
 
 bri = 0
 while bri < 255:
 	result = requests.put(group, data = json.dumps({ 'bri': bri, }))
-	print bri + ':' + result.json()
+	print "{}: {}".format(bri, result.json())
 	time.sleep(sleep_duration)
 	bri += 1
+
+print 'Wakeup sequence completed.'
