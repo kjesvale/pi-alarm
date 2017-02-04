@@ -9,6 +9,7 @@ cache/
 # Speech output
 *.wav
 *.mp3
+*.cue
 
 # Configuration files
 *.config
