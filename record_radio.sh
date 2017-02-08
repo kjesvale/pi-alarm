@@ -8,7 +8,7 @@ file_name=dagsnytt${duration}
 arguments="${radio_station} -l ${seconds} -A -s -a ${file_name}_tmp.mp3 --quiet"
 streamripper ${arguments}
 
-# Remove overwrite old files from temporary recording files
+# Replace old recordings
 rm ${file_name}.mp3
 rm ${file_name}.cue
 mv ${file_name}_tmp.mp3 ${file_name}.mp3
