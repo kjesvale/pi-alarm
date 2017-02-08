@@ -1,0 +1,4 @@
+30 6 * * 1-5 cd /home/pi/alarm && ./record_radio.sh
+0 7 * * 6-7 cd /home/pi/alarm && ./record_radio.sh
+30 6  * * 1-5 cd /home/pi/alarm && ./wakeup_sequence.sh
+30 8 * * 6-7 cd /home/pi/alarm && ./wakeup_sequence.sh
